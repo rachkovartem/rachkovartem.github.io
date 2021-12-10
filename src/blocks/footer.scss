@@ -1,0 +1,40 @@
+.footer {
+ position: relative;
+ z-index: 2;
+ background-color: rgb(27, 27, 27);
+ width: 100%;
+ padding-top: 50px;
+ padding-bottom: 50px;
+}
+
+.footer__wrapper {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  color: rgb(179, 179, 179);
+  gap: 50px;
+}
+
+.footer__description {
+  width: 50%;
+  font-size: 20px;
+}
+.footer__socials {
+  width: 50%;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #64bcff;
+
+}
+
+.footer__socials-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

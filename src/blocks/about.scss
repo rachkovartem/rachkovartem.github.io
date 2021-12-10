@@ -1,0 +1,37 @@
+.about {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+}
+
+.about__grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 40% 60%;
+}
+
+.about__photo {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about__description {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: rgb(245, 245, 245);
+}
+
+.about__title {
+  display: block;
+  padding-top: 50px;
+  color: #64bcff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.about__text {
+  margin-top: 50px;
+  display: block;
+  font-size: 25px;
+}
