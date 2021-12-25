@@ -43,6 +43,14 @@ const langButtons = document.querySelectorAll('.works__btn-lang');
 const promoSocialText = document.querySelector('.promo__social-text');
 const html = document.querySelector('html');
 const promoSocialDivider = document.querySelector('.promo__social-divider');
+const timer = document.querySelector('#timer span');
+const battle = document.querySelector('#battle span');
+const food = document.querySelector('#food span');
+const lb = document.querySelector('#lb span');
+const rt = document.querySelector('#rt span');
+const sitev1 = document.querySelector('#sitev1 span');
+const htl = document.querySelector('#htl span');
+const slider = document.querySelector('#slider span');
 
 
 function switchLang(lang) {
@@ -56,6 +64,14 @@ function switchLang(lang) {
       footerSocTitle.innerText = 'Мои социальные сети';
       promoSocialText.innerText = 'Социальные сети';
       promoSocialDivider.style.width = '';
+      timer.innerText = 'Таймер. Несложный таймер с возможностью старта, паузы, сохранения кругов и сброса. Присутсвует индикация как цифровая, так и на циферблате. Над дизайном долго не думал, поэтому он не очень изысканный.';
+      battle.innerText = 'Игра Морской бой. На нативном JS, с рандомной генерацией флота, возможностью играть против бота (тоже очень рандомного). Вспомните как развлекались школьники до появления телефонов.';
+      food.innerText = 'Сайт о здоровом питании. Присутсвует калькулятор каллорий, модальные окна, слайдер и прочие мелочи. Native JS, CCS3, HTML5, Webpack';
+      lb.innerText = 'Таблица лидеров, навеяная желанием улучшить оригинал по адресу https://www.dota2.com/ leaderboards. Ну и это была первая практика доступа к API. Загружается быстрее оригинала, есть фильтр, пагинация. Получает API с dota2.com. Задеплоен на heroku.';
+      rt.innerText = 'Самостоятельный проект по вёрстке о путешествии по России. HTML5, CSS3 со всеми своими современными технологиями, в том числе Grid Layout, которые позволяют делать максимально адаптивный проект.';
+      sitev1.innerText = 'Первая версия моего личного сайта. Первое, что сделал да HTML и CSS.';
+      htl.innerText = 'Одностраничный сайт о техниках и принципах обучения, свёрстанный с применением HTML5 и CSS3, используя методологию БЭМ.';
+      slider.innerText = 'Слайдер с фильтром. Одно из выполненных тестовых заданий (одно из первых). При выборе категории фильтруется наполнение слайдера, меняется индикатор количества страниц и так далее.'
       break
     case 'en':
       h1.innerHTML = 'Front end developer.<br><span class="header__title-span">WORKING HARD TO MAKE THE INTERNET AWESOME</span>';
@@ -66,6 +82,14 @@ function switchLang(lang) {
       footerSocTitle.innerText = 'My socials';
       promoSocialText.innerText = 'Socials';
       promoSocialDivider.style.width = '130px';
+      timer.innerText = 'Timer. Uncomplicated timer with start, pause, lap save and reset. There is an indication both digital and on the dial. I didn`t think about the design for a long time, so it`s not very sophisticated. ';
+      battle.innerText = 'Sea Battle game. On native JS, with a random fleet generation, use to play against a bot (also very random). Remember how schoolchildren had fun before the advent of telephones. ';
+      food.innerText = 'Website about healthy eating. There is a calorie calculator, modal windows, a slider and other little things. Own JS, CCS3, HTML5, Webpack';
+      lb.innerText = 'Leaderboards inspired by the desire to improve the original at https://www.dota2.com/ leaderboards. Well, this was the first practice of accessing the API. Loads faster than the original, there is a filter, pagination. Receives API from dota2.com. Deployed to hero.';
+      rt.innerText = 'An independent layout project about a trip to Russia. HTML5, CSS3 with all its modern technologies, including Grid Layout, which allow you to make the most responsive project.';
+      sitev1.innerText = 'This is the first version of my personal site. The first thing I did was HTML and CSS.';
+      htl.innerText = 'One page site about teaching methods and principles, laid out using HTML5 and CSS3, using the BEM methodology.';
+      slider.innerText = 'Slider with filter. One of the completed test tasks (one of the first). When you select a category, the content of the slider is filtered, the indicator of the number of pages changes, and so on.'
   }
 }
 
