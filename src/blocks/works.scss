@@ -1,7 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 .works {
   position: relative;
   margin-top: 100vh;
-  padding-bottom: 15px;
+  padding-bottom: 100px;
   padding-top: 40px;
   width: 100%;
   height: 100%;
@@ -9,7 +13,10 @@
   background-color: #fff;
   box-shadow: rgb(35 35 50 / 80%) 0px 0px 11px -2px;
   &::before {
-    content: '';
+    font-family: 'Pacifico';
+    content: 'Rachkov Artem';
+    font-size: 45px;
+    line-height: 1;
     display: block;
     position: absolute;
     top: -95vh;
@@ -17,10 +24,33 @@
     transform: translateX(-50%);
     width: 320px;
     height: 45px;
-    background-image: url('../images/logo.png');
-    background-size: cover;
   }
 }
+
+.works__lang-links-wrapper {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: -95vh;
+  right: 0;
+  transform: translateX(-50%);
+}
+
+.works__btn-lang {
+  background-color: rgba(0,0,0, .0);
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.works__btn-lang_active {
+  text-decoration: underline;
+}
+
 
 .works__title {
   margin: 0;
@@ -37,15 +67,124 @@
   width: 60%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: repeat(6, 170px);
   gap: 15px;
 }
 
 .works__item {
+  display: flex;
+  position: relative;
   width: 100%;
-  height: 400px;
+  height: 100%;
+  background-position: center;
+  background-size: 100%;
   background-color: rgb(116, 110, 110);
-  margin: 0 auto;
+  transition: background-size 1s;
+  -moz-transition: background-size 1s;
+  -ms-transition: background-size 1s;
+  -o-transition: background-size 1s;
+  -webkit-transition: background-size 1s;
+  &:hover {
+    background-size: 108%;
+  }
+  a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .4);
+    z-index: 1;
+    transition: all 1s;
+  }
+  &::after {
+    margin: auto;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 2;
+  }
+  &:hover::after {
+    opacity: 100;
+  }
+
+  &:hover::before {
+    background-color: rgba(#4484b4, .6);
+  }
+
+
+}
+
+.works__item:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 2;
+  background-image: url('../images/jstimer.gif');
+  &::after {
+    content: " Таймер. Несложный таймер с возможностью старта, паузы, сохранения кругов и сброса. Присутсвует индикация как цифровая, так и на циферблате. Над дизайном долго не думал, поэтому он не очень изысканный"
+  }
+}
+
+.works__item:nth-child(2) {
+  grid-area: 1 / 2 / 2 / 4;
+  background-image: url('../images/jsbattleship.gif');
+  &::after {
+    content: "Игра Морской бой. На нативном JS, с рандомной генерацией флота, возможностью играть против бота (тоже очень рандомного). Вспомните как развлекались школьники до появления телефонов."
+  }
+}
+
+.works__item:nth-child(3) {
+  grid-area: 2 / 1 / 4 / 3;
+  background-image: url('../images/food.gif');
+  &::after {
+    content: "Сайт о здоровом питании. Присутсвует калькулятор каллорий, модальные окна, слайдер и прочие мелочи. Native JS, CCS3, HTML5, Webpack"
+  }
+}
+
+.works__item:nth-child(4) {
+  grid-area: 2 / 3 / 5 / 4;
+  background-image: url('../images/leaderboard.gif');
+  &::after {
+    content: "Таблица лидеров, навеяная желанием улучшить оригинал по адресу https://www.dota2.com/ leaderboards. Ну и это была первая практика доступа к API. Загружается быстрее оригинала, есть фильтр, пагинация. Получает API с dota2.com. Задеплоен на heroku."
+  }
+}
+
+.works__item:nth-child(5) {
+  grid-area: 4 / 1 / 6 / 2;
+  background-image: url('../images/rt.gif');
+  &::after {
+    content: "Самостоятельный проект по вёрстке о путешествии по России. HTML5, CSS3 со всеми своими современными технологиями, в том числе Grid Layout, которые позволяют делать максимально адаптивный проект."
+  }
+}
+
+.works__item:nth-child(6) {
+  grid-area: 4 / 2 / 5 / 3;
+  background-image: url('../images/sitev1.gif');
+  &::after {
+    content: "Первая версия моего личного сайта. Первое, что сделал да HTML и CSS."
+  }
+}
+
+.works__item:nth-child(7) {
+  grid-area: 5 / 2 / 7 / 4;
+  background-image: url('../images/htl.gif');
+  &::after {
+    content: "Одностраничный сайт о техниках и принципах обучения, свёрстанный с применением HTML5 и CSS3, используя методологию БЭМ."
+  }
+}
+
+.works__item:nth-child(8) {
+  background-image: url('../images/slider.gif');
+  &::after {
+    content: "Слайдер с фильтром. Одно из выполненных тестовых заданий (одно из первых). При выборе категории фильтруется наполнение слайдера, меняется индикатор количества страниц и так далее."
+  }
 }
 
 .other {

@@ -1,0 +1,23 @@
+.promo {
+  &__social {
+      position: fixed;
+      width: 338px;
+      top: 230px;
+      left: -127px;
+      display: flex;
+      transform: rotate(-90deg);
+      align-items: center;
+      justify-content: space-between;
+      z-index: 3;
+  }
+  &__social-divider {
+      width: 70px;
+      height: 0px;
+      border: 0;
+      border-bottom: 2px solid #000000;
+  }
+  &__social-icon {
+      width: 20px;
+      height: 20px;
+  }
+}
