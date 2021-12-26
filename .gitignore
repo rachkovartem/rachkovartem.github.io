@@ -12,6 +12,7 @@
 
 # production
 /build
+CNAME
 
 # misc
 .DS_Store

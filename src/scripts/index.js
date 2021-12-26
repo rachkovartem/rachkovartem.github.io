@@ -6,6 +6,14 @@ import '../vendor/materialize.min.js';
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+function calcVH() {
+  var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  document.documentElement.style.setProperty('--100vh', `${vH}px`);
+}
+calcVH();
+window.addEventListener('onorientationchange', calcVH, true);
+window.addEventListener('resize', calcVH, true);
+
 document.addEventListener('DOMContentLoaded', function(){
 
 
@@ -40,10 +48,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
   function worksGridScrollAnimation(selector) {
     selector.forEach((item) => {
-      item.style.opacity = '1';
-      item.style.transform = 'scale(1)';
 
-      const percentsToTop = item.getBoundingClientRect().y/document.documentElement.clientHeight;
+      const percentsToTop = item.getBoundingClientRect().y/(window.innerHeight);
       const opacity = (1 - percentsToTop)*2;
       const scale = (1 - percentsToTop)*2;
 
@@ -54,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       if (scale < 0) {
         item.style.transform = 'scale(0)'
-      } else if (scale > 1) {
+      } else if (scale > 0.75) {
         item.style.transform = 'scale(1)'
       } else {
         item.style.transform = `scale(${scale})`;
