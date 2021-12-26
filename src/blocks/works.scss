@@ -5,6 +5,7 @@
 .works {
   position: relative;
   margin-top: 100vh;
+  margin-top: calc(var(--vh, 1vh) * 100);
   padding-bottom: 100px;
   padding-top: 40px;
   width: 100%;
@@ -20,6 +21,7 @@
     display: block;
     position: absolute;
     top: -95vh;
+    top: calc((var(--vh, 1vh) * 100) - 5);
     left: 50%;
     transform: translateX(-50%);
     width: 320px;
