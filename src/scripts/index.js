@@ -1,6 +1,25 @@
 import isWindows from 'cross-env/src/is-windows';
 import '../index.html';
 import '../styles/index.scss';
+import '../vendor/materialize.min.js';
+
+const page = document.querySelector('.page');
+const preloader = document.querySelector('.preloader-wrapper');
+const promo__social = document.querySelector('.promo__social');
+const header = document.querySelector('.header');
+const works = document.querySelector('.works');
+const about = document.querySelector('.about');
+const footer = document.querySelector('.footer');
+
+window.onload = function() {
+  preloader.style = 'display: none';
+  page.style = '';
+  promo__social.style = '';
+  header.style = '';
+  works.style = '';
+  about.style = '';
+  footer.style = '';
+}
 
 const gridItems = document.querySelectorAll('.works__item')
 

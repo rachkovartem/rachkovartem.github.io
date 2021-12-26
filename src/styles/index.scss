@@ -1,11 +1,13 @@
 @import './fonts.scss';
 @import '~normalize.css';
+@import '../vendor/materialize.min.css';
 
 * {
   font-family: Murecho-Regular;
 }
 
 /* Blocks */
+@import '../blocks/preloader.scss';
 @import '../blocks/page.scss';
 @import '../blocks/header.scss';
 @import '../blocks/works.scss';
