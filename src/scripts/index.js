@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function(){
         worksTitle.innerText = 'Примеры моих работ';
         aboutTitle.innerText = 'О, привет!';
         aboutText.innerText = 'Я Артем, начинающий веб-разработчик из города Краснодар. Помимо фронтенда люблю свою тачку (даже фотография тут с ней) и играть в доту 2 (да, есть грешок). А ещё я 20 лет прожил в городе Вологда-гда-гда, но теперь живу в Краснодаре.'
-        footerDescr.innerHTML = '<span><a href="#" class="footer__link">Здесь</a> вы можете ознакомиться с моим резюме, если ищите Frontend разработчика.<br>Или свяжитесь со мной<br><br><a href="tel:89992610031" class="footer__link">8 (999) 261-00-31</a><br><a href="mailto:ateee@yandex.ru" class="footer__link">ateee@yandex.ru</a></span>';
+        footerDescr.innerHTML = '<span><a href="https://drive.google.com/file/d/1Sc2gP7cFUz7v-tQz75RGBUwYsNz-eblP/view?usp=sharing" class="footer__link" target="blank">Здесь</a> вы можете ознакомиться с моим резюме, если ищите Frontend разработчика.<br>Или свяжитесь со мной<br><br><a href="tel:89992610031" class="footer__link">8 (999) 261-00-31</a><br><a href="mailto:ateee@yandex.ru" class="footer__link">ateee@yandex.ru</a></span>';
         footerSocTitle.innerText = 'Мои социальные сети';
         promoSocialText.innerText = 'Социальные сети';
         promoSocialDivider.style.width = '';
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function(){
         worksTitle.innerText = 'Examples of my few works';
         aboutTitle.innerText = 'Oh, hi!';
         aboutText.innerText = 'I am Artem, a junior web developer from Krasnodar city. In addition to the frontend, I love my car (even a photo with it) and play Dota 2 (yes, there is a sin). And I also lived for 20 years in the city of Vologda, once upon a time, but now I live in Krasnodar.'
-        footerDescr.innerHTML = '<span><a href="#" class="footer__link">Here</a> you can see my resume if you are looking for a frontend developer.<br>Or contact me<br><br><a href="tel:89992610031" class="footer__link">8 (999) 261-00-31</a><br><a href="mailto:ateee@yandex.ru" class="footer__link">ateee@yandex.ru</a></span>';
+        footerDescr.innerHTML = '<span><a href="https://drive.google.com/file/d/1Sc2gP7cFUz7v-tQz75RGBUwYsNz-eblP/view?usp=sharing" class="footer__link" target="blank">Here</a> you can see my resume if you are looking for a frontend developer.<br>Or contact me<br><br><a href="tel:89992610031" class="footer__link">8 (999) 261-00-31</a><br><a href="mailto:ateee@yandex.ru" class="footer__link">ateee@yandex.ru</a></span>';
         footerSocTitle.innerText = 'My socials';
         promoSocialText.innerText = 'Socials';
         promoSocialDivider.style.width = '130px';
