@@ -21,3 +21,16 @@
       height: 20px;
   }
 }
+
+
+@media screen and (max-width: 1200px) {
+  .promo__social {
+    left: -142px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .promo__social {
+    display: none;
+  }
+}

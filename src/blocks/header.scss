@@ -26,4 +26,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: calc(100vw/18);
+    span {
+      font-size: calc(100vw/23);
+    }
+  }
+}
 
