@@ -49,22 +49,37 @@ document.addEventListener('DOMContentLoaded', function(){
   function worksGridScrollAnimation(selector) {
     selector.forEach((item) => {
 
-      const percentsToTop = item.getBoundingClientRect().y/(window.innerHeight);
-      const opacity = (1 - percentsToTop)*2;
-      const scale = (1 - percentsToTop)*2;
+      let opacity = 0;
+      let scale = 0;
 
-      if (opacity < 0 || opacity > 1) {
-        return
-      } else {
+      let boundingClientRect = item.getBoundingClientRect().y;
+      let clientRectToCenter = boundingClientRect + +item.clientHeight/2 * +item.style.transform.slice(6,-1)
+
+
+      if (clientRectToCenter >  window.innerHeight) {
+        opacity = 0;
+        scale = 0;
         item.style.opacity = opacity;
+        item.style.transform = `scale(${scale})`
+      } else if (clientRectToCenter > 350 &&
+      clientRectToCenter < window.innerHeight) {
+
+        const perc = (window.innerHeight/clientRectToCenter - 1)*1.3;
+        opacity = perc > 1 ? 1 : perc;
+        scale = perc > 1 ? 1 : perc;
+
+        item.style.opacity = opacity;
+        item.style.transform = `scale(${scale})`
+
+
+      } else if (clientRectToCenter < 350 ||
+        clientRectToCenter === 350) {
+        opacity = 1
+        scale = 1
+        item.style.opacity = opacity;
+        item.style.transform = `scale(${scale})`
       }
-      if (scale < 0) {
-        item.style.transform = 'scale(0)'
-      } else if (scale > 0.75) {
-        item.style.transform = 'scale(1)'
-      } else {
-        item.style.transform = `scale(${scale})`;
-      }
+
     })
 
   }
