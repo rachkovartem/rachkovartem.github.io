@@ -13,6 +13,7 @@
   z-index: 2;
   background-color: #fff;
   box-shadow: rgb(35 35 50 / 80%) 0px 0px 11px -2px;
+  transition: all 1s;
   &::before {
     font-family: 'Pacifico';
     content: 'Rachkov Artem';
@@ -27,6 +28,7 @@
     width: 320px;
     height: 45px;
   }
+
 }
 
 .works__lang-links-wrapper {
@@ -115,9 +117,11 @@
     transition: all 1s;
   }
   span {
+    overflow: hidden;
+    width: 100%;
     margin: auto;
     color: #fff;
-    font-size: 18px;
+    font-size: 2vw;
     text-align: center;
     opacity: 0;
     transition: opacity 1s;
@@ -194,18 +198,40 @@
   .works {
     padding-bottom: 50px;
     padding-top: 20px;
+    margin-top: var(--100vh, 100vh);
+    &::before {
+
+      top: -90vh;
+      top: calc((var(--vh, 1vh) * -90));
+
+    }
   }
+
+
+
+
+  .works__lang-links-wrapper {
+
+    top: -90vh;
+    top: calc((var(--vh, 1vh) * -90));
+
+  }
+
 
   .works__title {
     font-size: 30px;
   }
 
   .works__grid {
-    width: 100%;
+    width: initial;
     grid-template-rows: repeat(6, calc(100vw*0.1758));
+    grid-template-columns: 39% 39% 19%;
+    gap: 1.5%;
+    padding-bottom: 1.5%;
   }
 
   .works {
+
     &::before {
       font-size: calc(100vw/17);
       width: initial;

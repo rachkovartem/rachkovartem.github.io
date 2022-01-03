@@ -3,11 +3,11 @@ import '../index.html';
 import '../styles/index.scss';
 import '../vendor/materialize.min.js';
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+let vH
 
 function calcVH() {
-  var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   document.documentElement.style.setProperty('--100vh', `${vH}px`);
 }
 calcVH();
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
   window.onload = function() {
-    console.log('loaded');
     preloader.style = 'display: none';
     page.style = '';
     promo__social.style = '';
@@ -39,9 +38,6 @@ document.addEventListener('DOMContentLoaded', function(){
     footer.style = '';
   }
 
-  header.onload = function() {
-    console.log('header loaded');
-  }
 
   const gridItems = document.querySelectorAll('.works__item')
 
@@ -49,35 +45,33 @@ document.addEventListener('DOMContentLoaded', function(){
   function worksGridScrollAnimation(selector) {
     selector.forEach((item) => {
 
-      let opacity = 0;
-      let scale = 0;
-
       let boundingClientRect = item.getBoundingClientRect().y;
-      let clientRectToCenter = boundingClientRect + +item.clientHeight/2 * +item.style.transform.slice(6,-1)
+      let clientRectToCenter = boundingClientRect + +item.clientHeight/2 * +item.style.transform.slice(6,-1);
+      const breakPoint = vH/2;
 
 
-      if (clientRectToCenter >  window.innerHeight) {
-        opacity = 0;
-        scale = 0;
-        item.style.opacity = opacity;
-        item.style.transform = `scale(${scale})`
-      } else if (clientRectToCenter > 350 &&
-      clientRectToCenter < window.innerHeight) {
 
-        const perc = (window.innerHeight/clientRectToCenter - 1)*1.3;
-        opacity = perc > 1 ? 1 : perc;
-        scale = perc > 1 ? 1 : perc;
+      if (clientRectToCenter >  vH) {
 
-        item.style.opacity = opacity;
-        item.style.transform = `scale(${scale})`
+        item.style.opacity = 0;
+        item.style.transform = `scale(${0})`
+      } else if (clientRectToCenter > breakPoint &&
+      clientRectToCenter < vH) {
+
+        const perc = (vH/clientRectToCenter - 1)*1.3;
+        const ratio = perc > 1 ? 1 : perc.toFixed(2);
+        if (item.innerText === 'Website about healthy eating. There is a calorie calculator, modal windows, a slider and other little things. Own JS, CCS3, HTML5, Webpack') {
+          console.log(ratio)
+        }
+        item.style.opacity = ratio;
+        item.style.transform = `scale(${ratio})`
 
 
-      } else if (clientRectToCenter < 350 ||
-        clientRectToCenter === 350) {
-        opacity = 1
-        scale = 1
-        item.style.opacity = opacity;
-        item.style.transform = `scale(${scale})`
+      } else if (clientRectToCenter < breakPoint ||
+        clientRectToCenter === breakPoint) {
+
+        item.style.opacity = 1;
+        item.style.transform = `scale(${1})`
       }
 
     })

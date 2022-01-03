@@ -81,7 +81,7 @@
 
 @media screen and (max-width: 626px) {
   .about__photo {
-    width: 130%;
+    width: 150%;
     justify-self: right;
   }
 }
@@ -96,5 +96,19 @@
 @media screen and (max-width: 482px) {
   .about__text {
     font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .about__photo {
+    width: 180%;
+    justify-self: right;
+  }
+}
+
+@media screen and (max-width: 348px) {
+  .about__photo {
+    width: 214%;
+    justify-self: right;
   }
 }
