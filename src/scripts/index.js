@@ -60,9 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         const perc = (vH/clientRectToCenter - 1)*1.3;
         const ratio = perc > 1 ? 1 : perc.toFixed(2);
-        if (item.innerText === 'Website about healthy eating. There is a calorie calculator, modal windows, a slider and other little things. Own JS, CCS3, HTML5, Webpack') {
-          console.log(ratio)
-        }
+
         item.style.opacity = ratio;
         item.style.transform = `scale(${ratio})`
 
@@ -99,6 +97,8 @@ document.addEventListener('DOMContentLoaded', function(){
   const sitev1 = document.querySelector('#sitev1 span');
   const htl = document.querySelector('#htl span');
   const slider = document.querySelector('#slider span');
+  const towatchapp = document.querySelector('#towatchapp span');
+
 
 
   function switchLang(lang) {
@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function(){
         sitev1.innerText = 'Первая версия моего личного сайта. Первое, что сделал да HTML и CSS.';
         htl.innerText = 'Одностраничный сайт о техниках и принципах обучения, свёрстанный с применением HTML5 и CSS3, используя методологию БЭМ.';
         slider.innerText = 'Слайдер с фильтром. Одно из выполненных тестовых заданий (одно из первых). При выборе категории фильтруется наполнение слайдера, меняется индикатор количества страниц и так далее.'
+        towatchapp.innerText = 'React-приложение для сохранения фильмов к просмотру. Работает с API кинопоиска. Ещё в работе, планы в readme.'
         break
       case 'en':
         h1.innerHTML = 'Front end developer.<br><span class="header__title-span">WORKING HARD TO MAKE THE INTERNET AWESOME</span>';
@@ -138,7 +139,8 @@ document.addEventListener('DOMContentLoaded', function(){
         sitev1.innerText = 'This is the first version of my personal site. The first thing I did was HTML and CSS.';
         htl.innerText = 'One page site about teaching methods and principles, laid out using HTML5 and CSS3, using the BEM methodology.';
         slider.innerText = 'Slider with filter. One of the completed test tasks (one of the first). When you select a category, the content of the slider is filtered, the indicator of the number of pages changes, and so on.'
-    }
+        towatchapp.innerText = 'React-app to save films list for viewing. Works with the Kinopoisk API. Still in progress, plans are in the readme.'
+      }
   }
 
   switchLang(lng);
