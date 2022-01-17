@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-
 .works {
   position: relative;
   margin-top: 100vh;
@@ -54,6 +53,7 @@
 
 .works__btn-lang_active {
   text-decoration: underline;
+  background: none;
 }
 
 
@@ -96,6 +96,8 @@
   -ms-transition: background-size 1s;
   -o-transition: background-size 1s;
   -webkit-transition: background-size 1s;
+  border-radius: 12px;
+  overflow: hidden;
   &:hover {
 
     background-size: 130%;
@@ -116,7 +118,8 @@
     z-index: 1;
     transition: all 1s;
   }
-  span {
+  p {
+    padding: 5%;
     overflow: hidden;
     width: 100%;
     margin: auto;
@@ -127,7 +130,7 @@
     transition: opacity 1s;
     z-index: 2;
   }
-  &:hover span {
+  &:hover p {
     opacity: 100;
   }
 
@@ -139,7 +142,7 @@
 }
 
 .works__item:nth-child(1) {
-  grid-area: 1 / 1 / 2 / 4;
+  grid-area: 1 / 1 / 3 / 4;
   background-size: 88%;
   background-image: url('../images/whattowatchapp.jpg');
   &:hover {
@@ -148,43 +151,43 @@
 }
 
 .works__item:nth-child(2) {
-  grid-area: 2 / 1 / 3 / 2;
+  grid-area: 3 / 1 / 4 / 2;
   background-image: url('../images/jstimer.png');
 }
 
 .works__item:nth-child(3) {
-  grid-area: 2 / 2 / 3 / 4;
+  grid-area: 3 / 2 / 4 / 4;
   background-image: url('../images/jsbattleship.png');
 }
 
 .works__item:nth-child(4) {
-  grid-area: 3 / 1 / 5 / 3;
+  grid-area: 4 / 1 / 6 / 3;
   background-image: url('../images/food.png');
 }
 
 .works__item:nth-child(5) {
-  grid-area: 3 / 3 / 6 / 4;
+  grid-area: 4 / 3 / 7 / 4;
   background-image: url('../images/leaderboard.png');
 }
 
 .works__item:nth-child(6) {
-  grid-area: 5 / 1 / 7 / 2;
+  grid-area: 6 / 1 / 8 / 2;
   background-image: url('../images/rt.png');
 }
 
 .works__item:nth-child(7) {
-  grid-area: 5 / 2 / 6 / 3;
+  grid-area: 6 / 2 / 7 / 3;
   background-image: url('../images/sitev1.png');
 }
 
 .works__item:nth-child(8) {
-  grid-area: 6 / 2 / 8 / 4;
+  grid-area: 7 / 2 / 9 / 4;
 
   background-image: url('../images/htl.png');
 }
 
 .works__item:nth-child(9) {
-  grid-area: 7 / 1 / 8 / 2;
+  grid-area: 8 / 1 / 9 / 2;
   background-image: url('../images/slider.png');
 }
 

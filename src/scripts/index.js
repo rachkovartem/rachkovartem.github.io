@@ -1,8 +1,5 @@
-import isWindows from 'cross-env/src/is-windows';
 import '../index.html';
 import '../styles/index.scss';
-import '../vendor/materialize.min.js';
-
 
 let vH
 
@@ -15,9 +12,6 @@ window.addEventListener('onorientationchange', calcVH, true);
 window.addEventListener('resize', calcVH, true);
 
 document.addEventListener('DOMContentLoaded', function(){
-
-
-
   const page = document.querySelector('.page');
   const preloader = document.querySelector('.preloader-wrapper');
   const promo__social = document.querySelector('.promo__social');
@@ -25,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function(){
   const works = document.querySelector('.works');
   const about = document.querySelector('.about');
   const footer = document.querySelector('.footer');
-
-
 
   window.onload = function() {
     preloader.style = 'display: none';
@@ -38,42 +30,25 @@ document.addEventListener('DOMContentLoaded', function(){
     footer.style = '';
   }
 
-
   const gridItems = document.querySelectorAll('.works__item')
-
 
   function worksGridScrollAnimation(selector) {
     selector.forEach((item) => {
-
       let boundingClientRect = item.getBoundingClientRect().y;
       let clientRectToCenter = boundingClientRect + +item.clientHeight/2 * +item.style.transform.slice(6,-1);
       const breakPoint = vH/2;
 
-
-
       if (clientRectToCenter >  vH) {
-
         item.style.opacity = 0;
         item.style.transform = `scale(${0})`
       } else if (clientRectToCenter > breakPoint &&
       clientRectToCenter < vH) {
-
-        const perc = (vH/clientRectToCenter - 1)*1.3;
+        const perc = (vH/clientRectToCenter - 1)*2;
         const ratio = perc > 1 ? 1 : perc.toFixed(2);
-
         item.style.opacity = ratio;
         item.style.transform = `scale(${ratio})`
-
-
-      } else if (clientRectToCenter < breakPoint ||
-        clientRectToCenter === breakPoint) {
-
-        item.style.opacity = 1;
-        item.style.transform = `scale(${1})`
       }
-
     })
-
   }
 
   window.addEventListener('scroll', () => {worksGridScrollAnimation(gridItems)});
@@ -89,17 +64,15 @@ document.addEventListener('DOMContentLoaded', function(){
   const promoSocialText = document.querySelector('.promo__social-text');
   const html = document.querySelector('html');
   const promoSocialDivider = document.querySelector('.promo__social-divider');
-  const timer = document.querySelector('#timer span');
-  const battle = document.querySelector('#battle span');
-  const food = document.querySelector('#food span');
-  const lb = document.querySelector('#lb span');
-  const rt = document.querySelector('#rt span');
-  const sitev1 = document.querySelector('#sitev1 span');
-  const htl = document.querySelector('#htl span');
-  const slider = document.querySelector('#slider span');
-  const towatchapp = document.querySelector('#towatchapp span');
-
-
+  const timer = document.querySelector('#timer p');
+  const battle = document.querySelector('#battle p');
+  const food = document.querySelector('#food p');
+  const lb = document.querySelector('#lb p');
+  const rt = document.querySelector('#rt p');
+  const sitev1 = document.querySelector('#sitev1 p');
+  const htl = document.querySelector('#htl p');
+  const slider = document.querySelector('#slider p');
+  const towatchapp = document.querySelector('#towatchapp p');
 
   function switchLang(lang) {
     switch (lang) {
@@ -150,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function(){
   document.querySelector(`#${lng}`).classList.add('works__btn-lang_active');
   html.lang = lng;
 
-
   langButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       switchLang(e.target.id);
@@ -162,5 +134,4 @@ document.addEventListener('DOMContentLoaded', function(){
       html.lang = e.target.id;
     })
   })
-
 })
