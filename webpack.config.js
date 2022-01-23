@@ -67,7 +67,7 @@ module.exports = {
   optimization: optimization(),
   target: isDev ? 'web' : 'browserslist',
   devServer: {
-    host: '192.168.1.38',
+    host: '0.0.0.0',
     port: 4200,
     watchFiles:  ['src/**/*', 'docs/**/*']
   },
