@@ -77,11 +77,11 @@ document.addEventListener('DOMContentLoaded', function(){
   function switchLang(lang) {
     switch (lang) {
       case 'ru':
-        h1.innerHTML = 'Фронтенд разработчик.<br><span class="header__title-span">Усердно работаю и учусь каждый день, чтобы делать что-то крутое</span>';
+        h1.innerHTML = 'Фронтенд разработчик.<br><p class="header__title-span">Усердно работаю и учусь каждый день, чтобы делать что-то крутое</p>';
         worksTitle.innerText = 'Примеры моих работ';
         aboutTitle.innerText = 'О, привет!';
-        aboutText.innerText = 'Я Артем, начинающий веб-разработчик из города Краснодар. Помимо фронтенда люблю свою тачку (даже фотография тут с ней) и играть в доту 2 (да, есть грешок). А ещё я 20 лет прожил в городе Вологда-гда-гда, но теперь живу в Краснодаре.'
-        footerDescr.innerHTML = '<span><a href="https://drive.google.com/file/d/1Sc2gP7cFUz7v-tQz75RGBUwYsNz-eblP/view?usp=sharing" class="footer__link" target="blank">Здесь</a> вы можете ознакомиться с моим резюме, если ищите Frontend разработчика.<br>Или свяжитесь со мной<br><br><a href="tel:89992610031" class="footer__link">8 (999) 261-00-31</a><br><a href="mailto:ateee@yandex.ru" class="footer__link">ateee@yandex.ru</a></span>';
+        aboutText.innerText = 'Я Артем, начинающий веб-разработчик из города Краснодар. Работаю с JS ES6+, HTML5, CSS3 (Flexbox, Grid, variables и тд) + препроцессоры, React 16.8+, Redux. Знаком с разными библиотеками, как те же MUI, React router dom, банальный bootstrap для JS или React и многие другие. Для деплоя проектов работаю с Node.js. Работал с разными API как из клиентской части, так и с сервера. Собирал проекты как с Gulp, так и с Webpack.'
+        footerDescr.innerHTML = '<span><a href="https://drive.google.com/file/d/1m8bJrt5wkPCCK47aeP62QGzKu0JcPShN/view?usp=sharing" class="footer__link" target="blank">Здесь</a> вы можете ознакомиться с моим резюме, если ищите Frontend разработчика.<br>Или свяжитесь со мной<br><br><a href="tel:89992610031" class="footer__link">8 (999) 261-00-31</a><br><a href="mailto:ateee@yandex.ru" class="footer__link">ateee@yandex.ru</a></span>';
         footerSocTitle.innerText = 'Мои социальные сети';
         promoSocialText.innerText = 'Социальные сети';
         promoSocialDivider.style.width = '';
@@ -96,11 +96,11 @@ document.addEventListener('DOMContentLoaded', function(){
         towatchapp.innerText = 'React-приложение для сохранения фильмов к просмотру. Работает с API кинопоиска. Ещё в работе, планы в readme.'
         break
       case 'en':
-        h1.innerHTML = 'Front end developer.<br><span class="header__title-span">WORKING HARD TO MAKE THE INTERNET AWESOME</span>';
+        h1.innerHTML = 'Front end developer.<br><p class="header__title-span">WORKING HARD TO MAKE THE INTERNET AWESOME</p>';
         worksTitle.innerText = 'Examples of my few works';
         aboutTitle.innerText = 'Oh, hi!';
-        aboutText.innerText = 'I am Artem, a junior web developer from Krasnodar city. In addition to the frontend, I love my car (even a photo with it) and play Dota 2 (yes, there is a sin). And I also lived for 20 years in the city of Vologda, once upon a time, but now I live in Krasnodar.'
-        footerDescr.innerHTML = '<span><a href="https://drive.google.com/file/d/1Sc2gP7cFUz7v-tQz75RGBUwYsNz-eblP/view?usp=sharing" class="footer__link" target="blank">Here</a> you can see my resume if you are looking for a frontend developer.<br>Or contact me<br><br><a href="tel:89992610031" class="footer__link">8 (999) 261-00-31</a><br><a href="mailto:ateee@yandex.ru" class="footer__link">ateee@yandex.ru</a></span>';
+        aboutText.innerText = "I'm Artem, a beginner web developer from the city of Krasnodar. I work with JS ES6+, HTML5, CSS3 (Flexbox, Grid, variables, etc.) + preprocessors, React 16.8+, Redux. Familiar with different libraries, like the same MUI, React router dom, banal bootstrap for JS or React and many others. To deploy projects, I work with Node.js. Worked with different APIs from the client side and from the server. I have built projects with Gulp and Webpack."
+        footerDescr.innerHTML = '<span><a href="https://drive.google.com/file/d/1m8bJrt5wkPCCK47aeP62QGzKu0JcPShN/view?usp=sharing" class="footer__link" target="blank">Here</a> you can see my resume if you are looking for a frontend developer.<br>Or contact me<br><br><a href="tel:89992610031" class="footer__link">8 (999) 261-00-31</a><br><a href="mailto:ateee@yandex.ru" class="footer__link">ateee@yandex.ru</a></span>';
         footerSocTitle.innerText = 'My socials';
         promoSocialText.innerText = 'Socials';
         promoSocialDivider.style.width = '130px';
