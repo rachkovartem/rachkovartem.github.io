@@ -5,8 +5,8 @@
   position: relative;
   margin-top: 100vh;
   margin-top: var(--100vh, 100vh);
-  padding-bottom: 100px;
-  padding-top: 40px;
+  //padding-bottom: 100px;
+  //padding-top: 40px;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -14,7 +14,7 @@
   box-shadow: rgb(35 35 50 / 80%) 0px 0px 11px -2px;
   transition: all 1s;
   &::before {
-    font-family: 'Pacifico';
+    font-family: 'Pacifico', serif;
     content: 'Rachkov Artem';
     font-size: 45px;
     line-height: 1;
