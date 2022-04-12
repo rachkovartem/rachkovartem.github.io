@@ -4,10 +4,10 @@
   "description": "personal cite",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
-    "start": "cross-env NODE_ENV=development webpack serve --mode development --open"
+    "dev": "cross-env NODE_ENV=development webpack serve --mode development --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d docs"
   },
   "browserslist": ">0.25%, not dead",
   "repository": {
@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
+    "gh-pages": "^3.2.3",
     "normalize.css": "^8.0.1",
     "swiper": "^7.4.1"
   }
